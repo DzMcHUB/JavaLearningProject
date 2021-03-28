@@ -1,6 +1,8 @@
-## JavaLearningProject
-##project01
+# JavaLearningProject
+
+## project01:
   print hello
-##project02
-  solve chess problem
+
+## project02:
+solve chess problem
   
