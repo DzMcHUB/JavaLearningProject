@@ -6,7 +6,9 @@ public class multiplicationTable {
         for (int i = 1; i <= 9; i +=3) {
             for (int j = 1; j <= 10; j++){
                 for (int n = 0; n<3; n++){
-                    System.out.print((i+n) + "x" + j + " = " + (i+n) * j + "   ");
+                    System.out.print((i+n) + "x" +
+                            (j<10?" ":"") + j + " = " +
+                            ((i+n)*j<10? " ":"") + (i+n) * j + "   ");
                 }
                 System.out.println();
             }
