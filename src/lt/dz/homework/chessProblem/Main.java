@@ -1,6 +1,6 @@
-package lt.dz.homework.project02;
+package lt.dz.homework.chessProblem;
 
-public class chessProblem {
+public class Main {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 64; i++) {

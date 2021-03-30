@@ -1,6 +1,6 @@
-package lt.dz.homework.project03;
+package lt.dz.homework.multiplicationTable;
 
-public class multiplicationTable {
+public class Main {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 9; i +=3) {
@@ -14,6 +14,5 @@ public class multiplicationTable {
             }
             System.out.println();
         }
-
     }
 }

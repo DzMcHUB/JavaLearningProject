@@ -1,6 +1,6 @@
-package lt.dz.homework.project01;
+package lt.dz.homework.helloWorld;
 
-public class hello {
+public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello!");
