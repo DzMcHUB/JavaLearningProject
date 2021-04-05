@@ -1,7 +1,7 @@
 # JavaLearningProject
 
 ## helloWorld:
- helloWorld print hello
+ print hello
 ## chessProblem:
  solve grain chess problem
 ## multiplicationTable:
