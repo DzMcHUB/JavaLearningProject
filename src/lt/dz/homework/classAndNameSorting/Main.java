@@ -41,22 +41,22 @@ public class Main {
 
         for (int i = 0; i < masyvas.length; i++) {
             for (int j = 0; j < masyvas.length; j++) {
-                if (masyvas[i].klase < masyvas[j].klase) {
-                    Mokinys temp = masyvas[i];
-                    masyvas[i] = masyvas[j];
-                    masyvas[j] = temp;
+                if (masyvas[j].klase > masyvas[i].klase) {
+                    Mokinys temp = masyvas[j];
+                    masyvas[j] = masyvas[i];
+                    masyvas[i] = temp;
                 }
-                if (masyvas[i].klase == masyvas[j].klase) {
-                    if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) < 0) {
-                        Mokinys temp = masyvas[i];
-                        masyvas[i] = masyvas[j];
-                        masyvas[j] = temp;
+                if (masyvas[j].klase == masyvas[i].klase) {
+                    if (masyvas[j].pavarde.compareToIgnoreCase(masyvas[i].pavarde) > 0) {
+                        Mokinys temp = masyvas[j];
+                        masyvas[j] = masyvas[i];
+                        masyvas[i] = temp;
                     }
                     if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) == 0) {
-                        if (masyvas[i].vardas.compareToIgnoreCase(masyvas[j].vardas) < 0) {
-                            Mokinys temp = masyvas[i];
-                            masyvas[i] = masyvas[j];
-                            masyvas[j] = temp;
+                        if (masyvas[j].vardas.compareToIgnoreCase(masyvas[i].vardas) > 0) {
+                            Mokinys temp = masyvas[j];
+                            masyvas[j] = masyvas[i];
+                            masyvas[i] = temp;
                         }
                     }
                 }
@@ -70,4 +70,3 @@ public class Main {
 
     }
 }
-
