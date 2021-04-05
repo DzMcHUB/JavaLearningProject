@@ -48,15 +48,15 @@ public class Main {
                 }
                 if (masyvas[i].klase == masyvas[j].klase) {
                     if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) < 0) {
-                        Mokinys temp2 = masyvas[i];
+                        Mokinys temp = masyvas[i];
                         masyvas[i] = masyvas[j];
-                        masyvas[j] = temp2;
+                        masyvas[j] = temp;
                     }
                     if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) == 0) {
                         if (masyvas[i].vardas.compareToIgnoreCase(masyvas[j].vardas) < 0) {
-                            Mokinys temp3 = masyvas[i];
+                            Mokinys temp = masyvas[i];
                             masyvas[i] = masyvas[j];
-                            masyvas[j] = temp3;
+                            masyvas[j] = temp;
                         }
                     }
                 }
