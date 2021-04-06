@@ -3,20 +3,6 @@ package lt.dz.homework.classAndNameSorting;
 public class Main {
     public static void main(String[] args) {
 
-        class Mokinys {
-            int klase;
-            String vardas;
-            String pavarde;
-
-            Mokinys() {
-            }
-
-            Mokinys(int klase, String vardas, String pavarde) {
-                this.klase = klase;
-                this.vardas = vardas;
-                this.pavarde = pavarde;
-            }
-        }
         Mokinys[] masyvas = {
                 new Mokinys(3, "Saulius", "Bernatonis"),
                 new Mokinys(1, "Darius", "Sileka"),
@@ -36,37 +22,36 @@ public class Main {
                 new Mokinys(3, "Tautvydas", "Bosas"),
                 new Mokinys(3, "Ignas", "Gaule"),
                 new Mokinys(3, "Ignas", "Petrauskas"),
-
         };
 
-        for (int i = 0; i < masyvas.length; i++) {
-            for (int j = 0; j < masyvas.length; j++) {
-                if (masyvas[j].klase > masyvas[i].klase) {
-                    Mokinys temp = masyvas[j];
-                    masyvas[j] = masyvas[i];
-                    masyvas[i] = temp;
+        for (int i = 0; i < masyvas.length - 1; i++) {
+            for (int j = i + 1; j < masyvas.length; j++) {
+                //geriau butu sukurti funkcija lyginancia skirtingas reiksmes siame if'e,
+                //nereiktu kitu if statement'u
+                if (masyvas[i].klase > masyvas[j].klase) {
+                    Mokinys temp = masyvas[i];
+                    masyvas[i] = masyvas[j];
+                    masyvas[j] = temp;
                 }
-                if (masyvas[j].klase == masyvas[i].klase) {
-                    if (masyvas[j].pavarde.compareToIgnoreCase(masyvas[i].pavarde) > 0) {
-                        Mokinys temp = masyvas[j];
-                        masyvas[j] = masyvas[i];
-                        masyvas[i] = temp;
+                if (masyvas[i].klase == masyvas[j].klase) {
+                    if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) > 0) {
+                        Mokinys temp = masyvas[i];
+                        masyvas[i] = masyvas[j];
+                        masyvas[j] = temp;
                     }
                     if (masyvas[i].pavarde.compareToIgnoreCase(masyvas[j].pavarde) == 0) {
-                        if (masyvas[j].vardas.compareToIgnoreCase(masyvas[i].vardas) > 0) {
-                            Mokinys temp = masyvas[j];
-                            masyvas[j] = masyvas[i];
-                            masyvas[i] = temp;
+                        if (masyvas[i].vardas.compareToIgnoreCase(masyvas[j].vardas) > 0) {
+                            Mokinys temp = masyvas[i];
+                            masyvas[i] = masyvas[j];
+                            masyvas[j] = temp;
                         }
                     }
                 }
             }
         }
 
-        for (Mokinys masyva : masyvas) {
-            System.out.println(masyva.klase + " klase " + masyva.pavarde + " " + masyva.vardas);
+        for (Mokinys index : masyvas) {
+            System.out.println(index.klase + " klase " + index.pavarde + " " + index.vardas);
         }
-
-
     }
 }
